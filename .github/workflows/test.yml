@@ -1,7 +1,13 @@
-name: Test 
-on: [workflow_dispatch] 
+name: Test Workflow
+
+on: 
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, World!"
+      - name: Check if workflows are working
+        run: echo "GitHub Actions are working!"
