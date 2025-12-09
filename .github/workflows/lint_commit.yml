@@ -6,7 +6,7 @@ on: [pull_request_target]
 jobs:
   lint_commits:
     runs-on: ubuntu-22.04
-    if: always() && github.repository == 'aseprite/aseprite'
+    #if: always() && github.repository == 'aseprite/aseprite'
     steps:
       - name: Lint PR commits
         uses: actions/github-script@v7
